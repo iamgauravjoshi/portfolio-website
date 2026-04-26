@@ -13,7 +13,7 @@ function Hero() {
     <section
       id="home"
       // className="min-h-screen flex items-center justify-between p-4 md:p-16 flex-col-reverse sm:flex-row "
-      className="mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-10 px-4 pb-28 pt-24 sm:px-6 md:px-10 lg:flex-row lg:justify-between lg:gap-16 lg:pb-16"
+      className="mx-auto flex min-h-screen max-w-7xl flex-col-reverse items-center justify-center gap-10 px-4 pb-28 pt-16 sm:px-6 md:px-10 lg:flex-row lg:justify-between lg:gap-16 lg:pb-16"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
