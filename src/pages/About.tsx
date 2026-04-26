@@ -4,9 +4,9 @@ import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import PageTitle from "../components/common/PageTitle";
 
 const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "6", label: "Portfolio Projects" },
-  { value: "20+", label: "Tools & Technologies" },
+  { value: "3", label: "Years Experience" },
+  { value: "6", label: "Projects" },
+  { value: "20", label: "Tools & Technologies" },
   { value: "3", label: "Core Domains" },
 ];
 
