@@ -6,21 +6,22 @@ interface IPageTitleProps {
   backgroundTitle: string;
 }
 
-const PageTitle: React.FC<IPageTitleProps> = ({ mainTitle, heighlitedTitle, backgroundTitle }) => {
+const PageTitle: React.FC<IPageTitleProps> = ({
+  mainTitle,
+  heighlitedTitle,
+  backgroundTitle,
+}) => {
   return (
-    <div className="title-section text-center relative py-20">
-      {/* Main Title */}
-      <h1 className="text-[56px] font-[900] leading-none text-white uppercase m-0">
-        {mainTitle}{" "}
-        <span className="text-[#ffb400]">{heighlitedTitle}</span>
+    <div className="relative px-4 py-14 text-center sm:py-16 lg:py-20">
+      <h1 className="relative z-10 m-0 text-4xl font-[900] uppercase leading-none text-white sm:text-5xl lg:text-[56px]">
+        {mainTitle} <span className="text-[#ffb400]">{heighlitedTitle}</span>
       </h1>
-      
-      {/* Background Title (extra large, faded) */}
-      <span className="title-bg text-[110px] absolute left-0 right-0 top-1/2 -translate-y-1/2 uppercase font-extrabold text-[rgba(255,255,255,0.07)] tracking-[10px] leading-[0.7]">
+
+      <span className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 text-[42px] font-extrabold uppercase leading-[0.8] tracking-[4px] text-[rgba(255,255,255,0.06)] sm:text-[72px] sm:tracking-[6px] lg:text-[110px] lg:tracking-[10px]">
         {backgroundTitle}
       </span>
     </div>
   );
-}
+};
 
 export default PageTitle;

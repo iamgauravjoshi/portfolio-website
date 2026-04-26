@@ -25,11 +25,11 @@ function PrimaryButton(props: IPrimaryButtonProps) {
     download,
   } = props;
 
-  const buttonClasses = `relative block w-fit group overflow-hidden px-7 py-[18px] border border-[#ffb400] text-white uppercase rounded-full cursor-pointer ${icon ? "pr-16" : ""} ${classname}`;
+  const buttonClasses = `relative inline-flex w-fit items-center justify-center overflow-hidden rounded-full border border-[#ffb400] px-7 py-[18px] text-sm uppercase text-white cursor-pointer group sm:text-base ${icon ? "pr-16" : ""} ${classname}`;
 
   const content = (
     <>
-      <span className="flex items-center font-semibold relative z-10 uppercase gap-2 text-white transition-colors duration-300 leading-none">
+      <span className="relative z-10 flex items-center gap-2 whitespace-nowrap font-semibold uppercase leading-none text-white transition-colors duration-300">
         {text}
       </span>
       {icon && (

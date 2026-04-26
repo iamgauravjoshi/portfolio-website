@@ -1,7 +1,7 @@
 import { ArrowDownToLine } from "lucide-react";
 import { PrimaryButton } from "../components/common/Buttons";
-import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import PageTitle from "../components/common/PageTitle";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const stats = [
   { value: "3", label: "Years Experience" },
@@ -14,19 +14,17 @@ function About() {
   useDocumentTitle("About - Gaurav Joshi");
 
   return (
-    <section id="about" className="min-h-screen">
+    <section id="about" className="min-h-screen px-4 pb-28 sm:px-6 md:px-10 lg:pb-16">
       <PageTitle
         mainTitle="About"
         heighlitedTitle="Me"
         backgroundTitle="Resume"
       />
 
-      <div className="grid grid-cols-2 gap-12 max-w-[1140px] mx-auto pb-20">
+      <div className="mx-auto grid max-w-[1140px] gap-10 pb-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-12">
         <div>
-          <h3 className="text-2xl font-semibold mb-6 uppercase">
-            Personal Infos
-          </h3>
-          <ul className="grid grid-cols-2 gap-y-5 mb-10">
+          <h3 className="mb-6 text-2xl font-semibold uppercase">Personal Infos</h3>
+          <ul className="mb-10 grid gap-x-6 gap-y-5 sm:grid-cols-2">
             <li>
               <span className="text-gray-300 opacity-80">Name : </span>
               <span>Gaurav Joshi</span>
@@ -51,9 +49,9 @@ function About() {
               <span className="text-gray-300 opacity-80">Languages : </span>
               <span>Hindi, English</span>
             </li>
-            <li>
+            <li className="sm:col-span-2">
               <span className="text-gray-300 opacity-80">Email : </span>
-              <span>joshigaurav1122@gmail.com</span>
+              <span className="break-all">joshigaurav1122@gmail.com</span>
             </li>
           </ul>
           <PrimaryButton
@@ -63,16 +61,16 @@ function About() {
             download="Gaurav_Joshi_Frontend_Resume.pdf"
           />
         </div>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="about-box-stats border border-[#252525] p-10"
+              className="about-box-stats border border-[#252525] p-6 sm:p-8 lg:p-10"
             >
-              <h3 className="inline-block text-5xl font-bold text-[#ffb400]">
+              <h3 className="inline-block text-4xl font-bold text-[#ffb400] sm:text-5xl">
                 {stat.value}
               </h3>
-              <p className="text-gray-300">{stat.label}</p>
+              <p className="text-sm text-gray-300 sm:text-base">{stat.label}</p>
             </div>
           ))}
         </div>
