@@ -1,5 +1,5 @@
 // import * as React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -16,7 +16,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/home" element={<Hero />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
